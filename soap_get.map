@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tran="http://transport.is.ws.vps.no">
+ <soapenv:Header>
+  <VPSApplicationHeader soapenv:actor="http://schemas.xmlsoap.org/soap/actor/next" xmlns="http://ws.vps.no" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <msgRef>##vpsmsgid##</msgRef>
+   <serviceName>TransportWS</serviceName>
+   <userID>##RoleUser##</userID>
+   <role>##RoleUser##</role>
+  </VPSApplicationHeader>
+ </soapenv:Header>
+ <soapenv:Body>
+  <tran:getMessageFromQueue>
+  </tran:getMessageFromQueue>
+ </soapenv:Body>
+</soapenv:Envelope>
+

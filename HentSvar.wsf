@@ -1,0 +1,10 @@
+<job id="MainProgram">
+  <script language="VBScript" src="constants.vbs"/>
+  <script language="VBScript" src="CServiceRequest.vbs"/>
+  <script language="VBScript" src="utilFunctions.vbs"/>       
+  <script language="VBScript" src="HentSvar.vbs"/>     
+  <script language="VBScript">
+    ' Here we call the main program
+    HentSvar
+  </script>
+</job>

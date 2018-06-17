@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataPDU xmlns="urn:swift:saa:xsd:saa.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <Header>
+  <Message>
+   <SenderReference>##pduref##</SenderReference>
+   <MessageIdentifier>reda.001.001.04</MessageIdentifier>
+   <Format>MX</Format>
+   <Sender>
+    <DN>##SenderAddressInfo##</DN>
+   </Sender>
+   <Receiver>
+    <DN>##ReceiverAddressInfo##</DN>
+   </Receiver>
+  </Message>
+ </Header>
+ <Body>
+  <AppHdr xmlns="urn:swift:xsd:$ahV10">
+   <MsgRef>##pduref##</MsgRef>
+   <CrDate>##datetime##</CrDate>
+  </AppHdr>
+  <Document xmlns="urn:swift:xsd:reda.001.001.04" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <PricRpt>
+     <MsgId>
+       <Id>##pduref##</Id>
+       <CreDtTm>##datetime##</CreDtTm>
+     </MsgId>
+     <MsgPgntn>
+       <PgNb>1</PgNb>
+       <LastPgInd>true</LastPgInd>
+     </MsgPgntn>
+     <PricRptId>##pduref##</PricRptId>
+     <Fctn>NEWP</Fctn>
+     <PricValtnDtls>
+       <Id>I##pduref##</Id>
+       <NAVDtTm>
+         <DtTm>##DATO##T##CUT-OFF##</DtTm> 
+       </NAVDtTm>
+       <FinInstrmDtls>
+         <Id>
+           <ISIN>##ISIN##</ISIN>
+         </Id>
+         <DualFndInd>false</DualFndInd>
+       </FinInstrmDtls>
+       <ValtnTp>USUA</ValtnTp>
+       <OffclValtnInd>true</OffclValtnInd>
+       <SspdInd>false</SspdInd>
+       <PricDtls>
+         <Tp>NAVL</Tp>
+         <ValInInvstmtCcy>
+           <Amt Ccy="##VALUTA##">##NAV##</Amt> 
+         </ValInInvstmtCcy>
+         <ForExctnInd>true</ForExctnInd>
+         <CumDvddInd>false</CumDvddInd>
+         <EstmtdPricInd>false</EstmtdPricInd>
+         <TaxLbltyDtls>
+           <Tp>INPO</Tp>
+           <Amt Ccy="##VALUTA##">##RENTEDEL##</Amt>
+           <Ctry>NO</Ctry>
+         </TaxLbltyDtls>
+       </PricDtls>
+     </PricValtnDtls>
+   </PricRpt>
+  </Document>
+ </Body>
+</DataPDU>
